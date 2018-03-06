@@ -1,0 +1,60 @@
+<form #registerUser="ngForm" (submit)="onSubmit(registerUser)" [formGroup]="myForm">
+
+  <div class="form-group">
+  <ion-input type="text" name="nickname" [(ngModel)]="user.nickname" placeholder="Your Nickname" required formControlName="nickname"></ion-input>
+  <span>*</span>
+</div>
+
+<div *ngIf="nickname.hasError('required') && nickname.touched">
+    <p class="mis">Please enter a valid Nickname.</p>
+  </div>
+
+<div class="form-group">
+  <ion-input type="text" name="firstName" [(ngModel)]="user.firstName" placeholder="Your First Name" required formControlName="firstName"></ion-input>
+  <span>*</span>
+</div>
+<div *ngIf="firstName.hasError('required') && firstName.touched">
+    <p class="mis">Please enter a valid First Name.</p>
+  </div>
+
+<div class="form-group">
+  <ion-input type="text" name="lastName" [(ngModel)]="user.lastName" placeholder="Your Last Name" required formControlName="lastName"></ion-input>
+  <span>*</span>
+</div>
+<div *ngIf="lastName.hasError('required') && lastName.touched">
+    <p class="mis">Please enter a valid Last Name.</p>
+  </div>
+
+<div class="form-group">
+  <ion-input type="email" name="emailUser"  [pattern]="emailPattern" [(ngModel)]="user.emailUser" placeholder="Your Email Address" required formControlName="emailUser"></ion-input>
+  <span>*</span>
+</div>
+<div *ngIf="emailUser.hasError('required') && emailUser.touched">
+    <p class="mis">Please enter a valid Email Address.</p>
+  </div>
+
+<div class="form-group">
+  <ion-input type="password" name="pword" [(ngModel)]="user.pword" placeholder="Your Password" required formControlName="pword"></ion-input>
+  <span>*</span>
+</div>
+
+
+<div *ngIf="pword.hasError('required') && pword.touched">
+    <p class="mis">Please enter a valid Password  .</p>
+  </div>
+
+
+
+<div class="form-group">
+  <ion-input type="tel" name="phone" [(ngModel)]="user.phone" placeholder="Your Phone Number" required maxlength="15" formControlName="phone"></ion-input>
+  <span>*</span>
+</div>
+<div *ngIf="phone.hasError('required') && phone.touched">
+    <p class="mis">Please enter a valid Phone Number.</p>
+  </div>
+  
+
+<button ion-button color="light" full class="soial-login-google m-t-20 login-btn m-b-20 " type="submit" [disabled]="!registerUser.valid">Register</button>
+
+<p class="m-t-20">By using the application you accept Terms of use</p>
+</form>

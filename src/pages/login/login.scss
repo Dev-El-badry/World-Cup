@@ -1,0 +1,27 @@
+page-login {
+    .button-inner {
+        justify-content: left;
+       
+         
+      }
+      .soial-login-google, .soial-login-facebook {
+        border-radius: 4px;
+        text-transform: none !important;
+        height: 50px;
+        font-size: 22px;
+      }
+
+      .soial-login-google {
+          color: #3e3e3e;
+          background-color: #fff
+      }
+      .soial-login-facebook {
+          background-color: #3b5998;
+          color: #f0f0f0;
+      }
+
+      p {
+          text-align: center;
+          color: #9aacc5 !important
+      }
+}

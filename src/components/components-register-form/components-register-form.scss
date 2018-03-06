@@ -1,0 +1,40 @@
+components-register-form {
+    .button-inner {
+        
+        justify-content: center !important;
+    }
+
+    ion-input {
+        background-color: #b7c8d9 !important;
+        height: 40px;
+        color: #575757;
+        border-radius: 4px;
+        margin-top: 12px;
+        padding-left: 10px
+    }
+
+    .input-cover {
+       top: auto
+    }
+
+    .form-group {
+        position: relative;
+        background-color: transparent;
+        span {
+        position: absolute;
+        top: 8px;
+        right: 9px;
+        font-size: 24px;
+        color: red;
+    }
+
+    
+    }
+
+   .mis {
+       color: red !important;
+       text-align: left !important;
+   }
+
+    
+}

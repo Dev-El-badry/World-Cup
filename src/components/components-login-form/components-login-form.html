@@ -1,0 +1,10 @@
+<form #loginUser="ngForm" (submit)="onSubmit(loginUser)">
+ 
+  <ion-input type="email" name="emailUser" #emailUser="ngModel" [(ngModel)]="user.emailUser" placeholder="Your Email Address" required></ion-input>
+  <ion-input type="password" name="pword" #pword="ngModel" [(ngModel)]="user.pword" placeholder="Your Password" required></ion-input>
+
+ 
+<button ion-button color="light" full class="soial-login-google m-t-20 login-btn m-b-20 " [disabled]="!loginUser.valid">Login</button>
+<u>Forgot Your Password?</u>
+<p>By using the application you accept Terms of use</p>
+</form>
